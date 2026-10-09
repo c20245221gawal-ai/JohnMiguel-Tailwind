@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+    </style>
+
+    <title>My Portfolio</title>
+</head>
+
+<body class="bg-gray-100 text-gray-800 transition-colors duration-300 dark:bg-gray-950 dark:text-gray-100">
+
+    <!-- Intro -->
+    <section class="bg-gray-100 py-10 text-center transition-colors duration-300 dark:bg-gray-950">
+
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
+            DV ROVEM NUMBER 1
+        </h1>
+
+    
+        <button
+            id="switch"
+            type="button"
+            class="mt-6 rounded-lg bg-blue-600 px-6 py-2 font-semibold text-white transition hover:bg-blue-700 active:scale-95">
+             Dark Mode
+        </button>
+
+    </section>
+
+    <!-- Navigation -->
+    <header class="bg-gray-900 text-white shadow-lg">
+
+        <nav class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-4 sm:flex-row">
+
+            <span class="text-xl font-bold">
+                EH KMJS NAYAN
+            </span>
+
+            <ul class="flex flex-wrap justify-center gap-6">
+
+                <li>
+                    <a href="#projects" class="transition hover:text-blue-400">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services" class="transition hover:text-blue-400">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="transition hover:text-blue-400">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Projects -->
+        <section id="projects"
+            class="bg-gray-100 px-6 py-16 transition-colors duration-300 dark:bg-gray-950">
+
+            <div class="mx-auto max-w-6xl">
+
+                <h2 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
+                    My Projects
+                </h2>
+
+                <p class="max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+                    Personal portfolio, payroll system, company website,
+                    startup website, and compliance monitoring system.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services"
+            class="bg-orange-500 px-6 py-16 text-white transition-colors duration-300 dark:bg-orange-800">
+
+            <div class="mx-auto max-w-6xl">
+
+                <h2 class="mb-4 text-3xl font-bold">
+                    My Services
+                </h2>
+
+                <p class="max-w-2xl text-lg leading-relaxed">
+                    Website Creation, System Creation, AI Automation,
+                    Database Management, Project Management, Systems Analyst
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact"
+            class="bg-gray-100 px-6 py-16 transition-colors duration-300 dark:bg-gray-950">
+
+            <div class="mx-auto max-w-3xl">
+
+                <h2 class="mb-8 text-3xl font-bold text-gray-900 dark:text-white">
+                    Let's build together!
+                </h2>
+
+                <form action="#" class="space-y-6">
+
+                    <!-- Name -->
+                    <div>
+                        <label for="name"
+                            class="mb-2 block font-semibold text-gray-700 dark:text-gray-200">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:focus:ring-blue-900">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email"
+                            class="mb-2 block font-semibold text-gray-700 dark:text-gray-200">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:focus:ring-blue-900">
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label for="message"
+                            class="mb-2 block font-semibold text-gray-700 dark:text-gray-200">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            required
+                            class="w-full resize-y rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:focus:ring-blue-900"></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-md transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 active:scale-95 dark:bg-blue-500 dark:hover:bg-blue-400">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 px-6 py-5 text-center text-white">
+        <p>&copy; 2026 John Miguel J. Gawal. All rights reserved.</p>
+    </footer>
+
+    <!-- Dark Mode Switch -->
+    <script>
+        const switchButton = document.getElementById("switch");
+        const html = document.documentElement;
+
+        switchButton.addEventListener("click", function () {
+
+            const isDark = html.classList.toggle("dark");
+
+            if (isDark) {
+                switchButton.textContent = "Switch";
+                switchButton.classList.replace("bg-blue-600", "bg-yellow-500");
+                switchButton.classList.replace("hover:bg-blue-700", "hover:bg-yellow-600");
+            } else {
+                switchButton.textContent = "Switch";
+                switchButton.classList.replace("bg-yellow-500", "bg-blue-600");
+                switchButton.classList.replace("hover:bg-yellow-600", "hover:bg-blue-700");
+            }
+
+        });
+    </script>
+
+</body>
+</html>
