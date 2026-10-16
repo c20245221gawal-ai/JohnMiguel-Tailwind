@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,201 +7,604 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+
     <style type="text/tailwindcss">
         @custom-variant dark (&:where(.dark, .dark *));
+
+        @theme {
+            --color-neon: #c5ff41;
+        }
     </style>
 
-    <title>My Portfolio</title>
+    <title>JG — Creative Developer</title>
 </head>
 
-<body class="bg-gray-100 text-gray-800 transition-colors duration-300 dark:bg-gray-950 dark:text-gray-100">
+<body class="bg-[#f5f5f0] text-[#171717] dark:bg-[#090a09] dark:text-white">
 
-    <!-- Intro -->
-    <section class="bg-gray-100 py-10 text-center transition-colors duration-300 dark:bg-gray-950">
+    <!-- NAVIGATION -->
+    <header class="border-b border-black/10 bg-[#f5f5f0] dark:border-white/10 dark:bg-[#090a09]">
+        <nav class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5 px-6 py-5 lg:px-10">
 
-        <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
-            DV ROVEM NUMBER 1
-        </h1>
+            <a href="#home" class="text-xl font-black tracking-tight">
+                JG<span class="text-lime-600 dark:text-[#c5ff41]">.</span>
+            </a>
 
-    
-        <button
-            id="switch"
-            type="button"
-            class="mt-6 rounded-lg bg-blue-600 px-6 py-2 font-semibold text-white transition hover:bg-blue-700 active:scale-95">
-             Dark Mode
-        </button>
-
-    </section>
-
-    <!-- Navigation -->
-    <header class="bg-gray-900 text-white shadow-lg">
-
-        <nav class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-4 sm:flex-row">
-
-            <span class="text-xl font-bold">
-                EH KMJS NAYAN
-            </span>
-
-            <ul class="flex flex-wrap justify-center gap-6">
-
-                <li>
-                    <a href="#projects" class="transition hover:text-blue-400">
-                        Projects
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#services" class="transition hover:text-blue-400">
-                        Services
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contact" class="transition hover:text-blue-400">
-                        Contact Us
-                    </a>
-                </li>
-
+            <ul class="flex flex-wrap items-center gap-5 text-sm font-medium sm:gap-8">
+                <li><a href="#projects" class="hover:text-lime-600 dark:hover:text-[#c5ff41]">Projects</a></li>
+                <li><a href="#services" class="hover:text-lime-600 dark:hover:text-[#c5ff41]">Services</a></li>
+                <li><a href="#contact" class="hover:text-lime-600 dark:hover:text-[#c5ff41]">Contact</a></li>
             </ul>
 
+            <button id="switch" type="button"
+                class="rounded-full border border-black/15 px-4 py-2 text-sm font-semibold dark:border-white/20"
+                aria-label="Toggle color theme">
+                ☾ Dark
+            </button>
         </nav>
     </header>
 
     <main>
 
-        <!-- Projects -->
-        <section id="projects"
-            class="bg-gray-100 px-6 py-16 transition-colors duration-300 dark:bg-gray-950">
+        <!-- HERO -->
+        <section id="home" class="px-6 py-20 sm:py-28 lg:px-10 lg:py-36">
+            <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.4fr_0.6fr]">
 
-            <div class="mx-auto max-w-6xl">
+                <div>
+                    <div
+                        class="mb-8 inline-flex items-center gap-3 rounded-full border border-black/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] dark:border-white/15">
+                        <span class="h-2 w-2 rounded-full bg-lime-500"></span>
+                        Aspiring Developer · Philippines
+                    </div>
 
-                <h2 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-                    My Projects
-                </h2>
+                    <p class="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-lime-700 dark:text-[#c5ff41]">
+                        Hello, I'm
+                    </p>
 
-                <p class="max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-                    Personal portfolio, payroll system, company website,
-                    startup website, and compliance monitoring system.
-                </p>
+                    <h1 class="text-5xl font-black leading-[1.05] tracking-tight sm:text-7xl lg:text-8xl">
+                        John Miguel
+                        <span class="mt-2 block text-lime-700 dark:text-[#c5ff41]">J. Gawal.</span>
+                    </h1>
+
+                    <p class="mt-8 max-w-xl text-lg leading-8 text-gray-600 dark:text-gray-400">
+                        I turn ideas into digital experiences. I create websites,
+                        systems, and practical technology solutions that combine
+                        creativity with functionality.
+                    </p>
+
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <a href="#projects"
+                            class="rounded-full bg-[#171717] px-7 py-4 text-sm font-bold text-white hover:bg-lime-700 dark:bg-[#c5ff41] dark:text-black dark:hover:bg-lime-300">
+                            Explore My Work ↗
+                        </a>
+
+                        <a href="#contact"
+                            class="rounded-full border border-black/20 px-7 py-4 text-sm font-bold dark:border-white/20">
+                            Let's Talk
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CREATIVE PROFILE CARD -->
+                <div class="relative mx-auto w-full max-w-sm">
+                    <div class="absolute -right-3 -top-3 h-full w-full rounded-3xl border border-lime-500"></div>
+
+                    <div class="relative rounded-3xl bg-[#c5ff41] p-7 text-black sm:p-9">
+                        <div class="flex items-start justify-between">
+                            <span class="text-xs font-black uppercase tracking-[0.25em]">
+                                Digital Creator
+                            </span>
+                            <span class="text-2xl">✳</span>
+                        </div>
+
+                        <div class="my-12">
+                            <div class="mb-4 text-7xl font-black tracking-tighter sm:text-8xl">
+                                JG<span class="text-white">.</span>
+                            </div>
+
+                            <div class="h-1 w-20 bg-black"></div>
+
+                            <p class="mt-5 text-sm font-semibold leading-6">
+                                Building better ideas,<br>
+                                one line of code at a time.
+                            </p>
+                        </div>
+
+                        <div class="flex items-end justify-between border-t border-black/20 pt-5">
+                            <div>
+                                <p class="text-xs uppercase tracking-widest">Focus</p>
+                                <p class="mt-1 font-bold">Code. Create. Improve.</p>
+                            </div>
+                            <span class="text-3xl">↗</span>
+                        </div>
+                    </div>
+
+                    <p class="mt-6 text-center text-xs uppercase tracking-[0.25em] text-gray-500">
+                        Independent mind. Creative solutions.
+                    </p>
+                </div>
 
             </div>
         </section>
 
-        <!-- Services -->
-        <section id="services"
-            class="bg-orange-500 px-6 py-16 text-white transition-colors duration-300 dark:bg-orange-800">
+        <!-- SKILLS STRIP -->
+        <section class="border-y border-black/10 dark:border-white/10">
+            <div
+                class="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-10 gap-y-4 px-6 py-7 text-xs font-bold uppercase tracking-[0.2em] text-gray-500 sm:gap-x-16">
+                <span>Web Development</span>
+                <span>UI / UX</span>
+                <span>Database Systems</span>
+                <span>Automation</span>
+                <span>System Analysis</span>
+            </div>
+        </section>
 
-            <div class="mx-auto max-w-6xl">
+        <!-- PROJECTS -->
+        <section id="projects" class="px-6 py-24 lg:px-10 lg:py-32">
+            <div class="mx-auto max-w-7xl">
 
-                <h2 class="mb-4 text-3xl font-bold">
-                    My Services
-                </h2>
+                <div class="mb-12 flex flex-wrap items-end justify-between gap-6">
+                    <div>
+                        <p class="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-lime-700 dark:text-[#c5ff41]">
+                            01 / Selected Work
+                        </p>
+                        <h2 class="text-4xl font-black tracking-tight sm:text-6xl">
+                            Things I've<br>been building<span class="text-lime-700 dark:text-[#c5ff41]">.</span>
+                        </h2>
+                    </div>
 
-                <p class="max-w-2xl text-lg leading-relaxed">
-                    Website Creation, System Creation, AI Automation,
-                    Database Management, Project Management, Systems Analyst
+                    <p class="max-w-sm text-sm leading-7 text-gray-600 dark:text-gray-400">
+                        A collection of concepts and systems designed to solve
+                        problems and make everyday work easier.
+                    </p>
+                </div>
+
+                <div class="grid gap-5 md:grid-cols-2">
+
+                    <!-- PROJECT 1 -->
+                    <article
+                        class="group rounded-3xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-[#111311] sm:p-7">
+                        <div
+                            class="flex min-h-64 flex-col justify-between rounded-2xl bg-[#c5ff41] p-6 text-black sm:p-8">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-widest">01 — Portfolio</span>
+                                <span class="text-2xl">↗</span>
+                            </div>
+                            <div>
+                                <div class="text-5xl font-black tracking-tighter sm:text-6xl">CREATE.</div>
+                                <div class="mt-2 text-sm font-semibold">Personal brand & digital identity</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start justify-between gap-4 pt-6">
+                            <div>
+                                <h3 class="text-xl font-bold">Personal Portfolio</h3>
+                                <p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                                    A modern space to showcase skills, projects, and creative work.
+                                </p>
+                            </div>
+                            <span class="text-2xl">↗</span>
+                        </div>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs dark:bg-white/10">HTML</span>
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs dark:bg-white/10">Tailwind
+                                CSS</span>
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs dark:bg-white/10">JavaScript</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2 -->
+                    <article
+                        class="group rounded-3xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-[#111311] sm:p-7">
+                        <div
+                            class="flex min-h-64 flex-col justify-between rounded-2xl bg-[#dbeafe] p-6 text-blue-950 sm:p-8">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-widest">02 — Business</span>
+                                <span class="text-2xl">↗</span>
+                            </div>
+                            <div>
+                                <div class="text-5xl font-black tracking-tighter sm:text-6xl">PAYROLL.</div>
+                                <div class="mt-2 text-sm font-semibold">People, records & calculations</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start justify-between gap-4 pt-6">
+                            <div>
+                                <h3 class="text-xl font-bold">Payroll Management</h3>
+                                <p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                                    An employee management concept for organizing records and payroll information.
+                                </p>
+                            </div>
+                            <span class="text-2xl">↗</span>
+                        </div>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs dark:bg-white/10">PHP</span>
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs dark:bg-white/10">MySQL</span>
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs dark:bg-white/10">Laravel</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 3 -->
+                    <article
+                        class="group rounded-3xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-[#111311] sm:p-7">
+                        <div
+                            class="flex min-h-64 flex-col justify-between rounded-2xl bg-[#fce7f3] p-6 text-pink-950 sm:p-8">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-widest">03 — Business</span>
+                                <span class="text-2xl">↗</span>
+                            </div>
+                            <div>
+                                <div class="text-5xl font-black tracking-tighter sm:text-6xl">CONNECT.</div>
+                                <div class="mt-2 text-sm font-semibold">A website for modern businesses</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start justify-between gap-4 pt-6">
+                            <div>
+                                <h3 class="text-xl font-bold">Company Website</h3>
+                                <p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                                    A business website concept focused on services, trust, and customer inquiries.
+                                </p>
+                            </div>
+                            <span class="text-2xl">↗</span>
+                        </div>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs dark:bg-white/10">Web Design</span>
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs dark:bg-white/10">Responsive
+                                UI</span>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 4 -->
+                    <article
+                        class="group rounded-3xl border border-black/10 bg-white p-5 dark:border-white/10 dark:bg-[#111311] sm:p-7">
+                        <div
+                            class="flex min-h-64 flex-col justify-between rounded-2xl bg-[#ede9fe] p-6 text-violet-950 sm:p-8">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold uppercase tracking-widest">04 — Technology</span>
+                                <span class="text-2xl">↗</span>
+                            </div>
+                            <div>
+                                <div class="text-5xl font-black tracking-tighter sm:text-6xl">ORGANIZE.</div>
+                                <div class="mt-2 text-sm font-semibold">Monitor, manage, improve</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start justify-between gap-4 pt-6">
+                            <div>
+                                <h3 class="text-xl font-bold">Monitoring System</h3>
+                                <p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                                    A system concept for tracking records, reviewing data, and managing workflows.
+                                </p>
+                            </div>
+                            <span class="text-2xl">↗</span>
+                        </div>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs dark:bg-white/10">Database</span>
+                            <span class="rounded-full bg-gray-100 px-3 py-1 text-xs dark:bg-white/10">System
+                                Analysis</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="bg-[#171917] px-6 py-24 text-white lg:px-10 lg:py-32">
+            <div class="mx-auto max-w-7xl">
+
+                <p class="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#c5ff41]">
+                    02 / What I Do
                 </p>
+
+                <div class="mb-12 flex flex-wrap items-end justify-between gap-6">
+                    <h2 class="text-4xl font-black tracking-tight sm:text-6xl">
+                        Ideas into<br>solutions<span class="text-[#c5ff41]">.</span>
+                    </h2>
+
+                    <p class="max-w-sm text-sm leading-7 text-gray-400">
+                        Practical digital services built around usability,
+                        organization, and thoughtful problem-solving.
+                    </p>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+                    <article class="rounded-2xl border border-white/10 p-7">
+                        <span class="text-3xl">⌘</span>
+                        <h3 class="mt-8 text-xl font-bold">Web Development</h3>
+                        <p class="mt-3 text-sm leading-7 text-gray-400">
+                            Responsive websites with clean layouts and user-friendly interfaces.
+                        </p>
+                        <div class="mt-6 text-sm font-semibold text-[#c5ff41]">01 / Build</div>
+                    </article>
+
+                    <article class="rounded-2xl border border-white/10 p-7">
+                        <span class="text-3xl">▦</span>
+                        <h3 class="mt-8 text-xl font-bold">System Development</h3>
+                        <p class="mt-3 text-sm leading-7 text-gray-400">
+                            Organized solutions for records, bookings, payroll, and business processes.
+                        </p>
+                        <div class="mt-6 text-sm font-semibold text-[#c5ff41]">02 / Develop</div>
+                    </article>
+
+                    <article class="rounded-2xl border border-white/10 p-7">
+                        <span class="text-3xl">⌘</span>
+                        <h3 class="mt-8 text-xl font-bold">Database Management</h3>
+                        <p class="mt-3 text-sm leading-7 text-gray-400">
+                            Structured data, database design, and reliable information management.
+                        </p>
+                        <div class="mt-6 text-sm font-semibold text-[#c5ff41]">03 / Organize</div>
+                    </article>
+
+                    <article class="rounded-2xl border border-white/10 p-7">
+                        <span class="text-3xl">✳</span>
+                        <h3 class="mt-8 text-xl font-bold">AI & Automation</h3>
+                        <p class="mt-3 text-sm leading-7 text-gray-400">
+                            Explore ways to simplify repetitive tasks and improve workflows with technology.
+                        </p>
+                        <div class="mt-6 text-sm font-semibold text-[#c5ff41]">04 / Automate</div>
+                    </article>
+
+                    <article class="rounded-2xl border border-white/10 p-7">
+                        <span class="text-3xl">⌕</span>
+                        <h3 class="mt-8 text-xl font-bold">Systems Analysis</h3>
+                        <p class="mt-3 text-sm leading-7 text-gray-400">
+                            Analyze requirements, map processes, and plan practical system solutions.
+                        </p>
+                        <div class="mt-6 text-sm font-semibold text-[#c5ff41]">05 / Analyze</div>
+                    </article>
+
+                    <article class="flex flex-col justify-between rounded-2xl bg-[#c5ff41] p-7 text-black">
+                        <div>
+                            <span class="text-3xl">↗</span>
+                            <h3 class="mt-8 text-2xl font-black">Have an idea?</h3>
+                            <p class="mt-3 text-sm leading-7">
+                                Let's discuss your next website or system project.
+                            </p>
+                        </div>
+                        <a href="#contact" class="mt-8 inline-block text-sm font-black underline underline-offset-4">
+                            Start a conversation →
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="px-6 py-24 lg:px-10">
+            <div class="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 md:items-center">
+
+                <div>
+                    <p class="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-lime-700 dark:text-[#c5ff41]">
+                        03 / A Little About Me
+                    </p>
+                    <h2 class="text-4xl font-black leading-tight tracking-tight sm:text-5xl">
+                        Curious mind.<br>
+                        <span class="text-lime-700 dark:text-[#c5ff41]">Creative approach.</span>
+                    </h2>
+                </div>
+
+                <div>
+                    <p class="text-base leading-8 text-gray-600 dark:text-gray-400">
+                        I'm John Miguel J. Gawal, an aspiring developer interested
+                        in web design, system development, databases, and emerging
+                        technology. I enjoy learning how things work and turning
+                        concepts into useful digital experiences.
+                    </p>
+
+                    <p class="mt-5 text-base leading-8 text-gray-600 dark:text-gray-400">
+                        My goal is to keep improving my skills, create meaningful
+                        projects, and build solutions that are both functional
+                        and visually engaging.
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <span class="rounded-full border border-black/15 px-4 py-2 text-sm dark:border-white/15">Always
+                            Learning</span>
+                        <span class="rounded-full border border-black/15 px-4 py-2 text-sm dark:border-white/15">Problem
+                            Solver</span>
+                        <span
+                            class="rounded-full border border-black/15 px-4 py-2 text-sm dark:border-white/15">Creative
+                            Thinker</span>
+                    </div>
+                </div>
 
             </div>
         </section>
 
-        <!-- Contact -->
-        <section id="contact"
-            class="bg-gray-100 px-6 py-16 transition-colors duration-300 dark:bg-gray-950">
+        <!-- CONTACT -->
+        <section id="contact" class="px-6 pb-24 lg:px-10 lg:pb-32">
+            <div class="mx-auto grid max-w-7xl overflow-hidden rounded-3xl bg-[#c5ff41] text-black md:grid-cols-2">
 
-            <div class="mx-auto max-w-3xl">
-
-                <h2 class="mb-8 text-3xl font-bold text-gray-900 dark:text-white">
-                    Let's build together!
-                </h2>
-
-                <form action="#" class="space-y-6">
-
-                    <!-- Name -->
+                <div class="flex flex-col justify-between p-8 sm:p-12 lg:p-16">
                     <div>
-                        <label for="name"
-                            class="mb-2 block font-semibold text-gray-700 dark:text-gray-200">
-                            Name
-                        </label>
+                        <p class="text-xs font-black uppercase tracking-[0.3em]">04 / Get In Touch</p>
 
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:focus:ring-blue-900">
+                        <h2 class="mt-8 text-4xl font-black leading-tight tracking-tight sm:text-6xl">
+                            Let's make<br>something<br>meaningful.
+                        </h2>
+
+                        <p class="mt-6 max-w-sm text-sm leading-7">
+                            Have a project, an idea, or an opportunity?
+                            Send me a message and let's start a conversation.
+                        </p>
                     </div>
 
-                    <!-- Email -->
-                    <div>
-                        <label for="email"
-                            class="mb-2 block font-semibold text-gray-700 dark:text-gray-200">
-                            Email
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            class="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:focus:ring-blue-900">
+                    <div class="mt-12">
+                        <p class="text-xs font-bold uppercase tracking-widest">Your next idea starts here.</p>
+                        <p class="mt-2 text-2xl font-black">JG. ↗</p>
                     </div>
+                </div>
 
-                    <!-- Message -->
-                    <div>
-                        <label for="message"
-                            class="mb-2 block font-semibold text-gray-700 dark:text-gray-200">
-                            Message
-                        </label>
+                <div class="bg-white p-8 text-black sm:p-12 lg:p-16">
+                    <form id="contactForm" class="space-y-6">
 
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="5"
-                            required
-                            class="w-full resize-y rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:focus:ring-blue-900"></textarea>
-                    </div>
+                        <div>
+                            <label for="name" class="mb-2 block text-sm font-bold">Your Name</label>
+                            <input id="name" name="name" type="text" required placeholder="Enter your name"
+                                class="w-full rounded-xl border border-black/15 bg-gray-50 px-4 py-4 text-sm outline-none focus:border-black">
+                        </div>
 
-                    <!-- Submit -->
-                    <button
-                        type="submit"
-                        class="rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-md transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 active:scale-95 dark:bg-blue-500 dark:hover:bg-blue-400">
-                        Send Message
-                    </button>
+                        <div>
+                            <label for="email" class="mb-2 block text-sm font-bold">Email Address</label>
+                            <input id="email" name="email" type="email" required placeholder="you@example.com"
+                                class="w-full rounded-xl border border-black/15 bg-gray-50 px-4 py-4 text-sm outline-none focus:border-black">
+                        </div>
 
-                </form>
+                        <div>
+                            <label for="subject" class="mb-2 block text-sm font-bold">What is it about?</label>
+                            <select id="subject" name="subject" required
+                                class="w-full rounded-xl border border-black/15 bg-gray-50 px-4 py-4 text-sm outline-none focus:border-black">
+                                <option value="" disabled selected>Select a topic</option>
+                                <option>Website Development</option>
+                                <option>System Development</option>
+                                <option>Collaboration</option>
+                                <option>Other Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="mb-2 block text-sm font-bold">Your Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                placeholder="Tell me about your idea..."
+                                class="w-full resize-y rounded-xl border border-black/15 bg-gray-50 px-4 py-4 text-sm outline-none focus:border-black"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full rounded-xl bg-black px-6 py-4 text-sm font-bold text-white hover:bg-gray-800">
+                            Prepare Email ↗
+                        </button>
+
+                        <p class="text-xs leading-5 text-gray-500">
+                            This form opens your email application. It does not send
+                            or store messages on its own.
+                        </p>
+
+                    </form>
+                </div>
 
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 px-6 py-5 text-center text-white">
-        <p>&copy; 2026 John Miguel J. Gawal. All rights reserved.</p>
-    </footer>
+    <!-- FOOTER -->
+    <footer class="border-t border-black/10 px-6 py-8 dark:border-white/10 lg:px-10">
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row">
 
-    <!-- Dark Mode Switch -->
+            <a href="#home" class="text-xl font-black tracking-tight">
+                JG<span class="text-lime-600 dark:text-[#c5ff41]">.</span>
+            </a>
+
+            <p class="text-center text-xs text-gray-500">
+                © 2026 John Miguel J. Gawal. Designed with purpose.
+            </p>
+
+            <a href="#home" class="text-sm font-semibold hover:text-lime-600 dark:hover:text-[#c5ff41]">
+                Back to top ↑
+            </a>
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script>
-        const switchButton = document.getElementById("switch");
+
+        console.log("GSAP version:", gsap.version);
+
+        gsap.to("h1", { x: -200, duration: 1, rotation: 360, scale: 1 }),
+            gsap.from("h2", { y: 60, opacity: 0, duration: 1, rotation: 360, scale: 1 });
+        gsap.fromto("h1", { opacity: 1, duration: 1, rotation: 360, scale: 1 });
+
+        gsap.from("h1", { y: -60, opacity: 0, duration: 1, ease: "power2 out " });
+        gsap.from("h1", { y: -60, opacity: 0, duration: 1, ease: "back out  2.5 " });
+        gsap.from("h1", { y: -60, opacity: 0, duration: 1, ease: "bounce  out " });
+        gsap.from("h1", { y: -60, opacity: 0, duration: 1, ease: "elastime 1,03 " });
+
+        gsap.from("nav a", { y: -20, opacity: 0, duration: 0.5, ease: "power2 out:stagger : 45 " });
+
+    </script>
+
+    <script>
+
+        const tl = gsap.timeline({ defaults: { duration: 0.1, ease: "power2.out" } });
+
+
+        tl.from("h1", { x: -50, opacity: 0 });
+
+        tl.from("nav a", { y: -30, opacity: 0, stagger: 0.1 });
+
+        tl.from("main section", { y: 50, opacity: 0, stagger: 0.2 });
+
+    </script>
+
+    </script>
+
+    <script>
+
         const html = document.documentElement;
+        const switchButton = document.getElementById("switch");
+
+
+        try {
+            if (localStorage.getItem("jg-theme") === "dark") {
+                html.classList.add("dark");
+            }
+        } catch (error) {
+
+        }
+
+        function updateThemeButton() {
+            const isDark = html.classList.contains("dark");
+            switchButton.textContent = isDark ? "☀ Light" : "☾ Dark";
+        }
+
+        updateThemeButton();
 
         switchButton.addEventListener("click", function () {
-
             const isDark = html.classList.toggle("dark");
 
-            if (isDark) {
-                switchButton.textContent = "Switch";
-                switchButton.classList.replace("bg-blue-600", "bg-yellow-500");
-                switchButton.classList.replace("hover:bg-blue-700", "hover:bg-yellow-600");
-            } else {
-                switchButton.textContent = "Switch";
-                switchButton.classList.replace("bg-yellow-500", "bg-blue-600");
-                switchButton.classList.replace("hover:bg-yellow-600", "hover:bg-blue-700");
+            try {
+                localStorage.setItem("jg-theme", isDark ? "dark" : "light");
+            } catch (error) {
+
             }
 
+            updateThemeButton();
+        });
+
+
+        document.getElementById("contactForm").addEventListener("submit", function (event) {    
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value.trim();
+
+            const emailSubject = encodeURIComponent("Portfolio Inquiry: " + subject);
+            const emailBody = encodeURIComponent(
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Topic: " + subject + "\n\n" +
+                "Message:\n" + message
+            );
+
+
+            const recipient = "your-email@example.com";
+
+            window.location.href =
+                "mailto:" + recipient +
+                "?subject=" + emailSubject +
+                "&body=" + emailBody;
         });
     </script>
 
 </body>
+
 </html>
